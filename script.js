@@ -1,6 +1,7 @@
 alert("Правила: копите деньги и прокачиваетесь, в минус можно уходить до -100, далее вы проиграете!")
 var score = 0;
 var updating = 1;
+var minus = 0;
 function teg () {
   document.getElementsByTagName("h1")[0].firstChild.data = score + "$";
 }
@@ -75,7 +76,7 @@ function reboot () {
   alert("Ваш уровень прокачки " + updating + ". Ваш баланс " + score + " .");
 }
 function dialog () {
-  minus = 0;
+  minus = 1;
   minus = parseInt(prompt("На сколько уровней прокачать(x*50, и это минус ваши деньги)", 5));
   dialog1();
   teg();
