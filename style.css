@@ -55,6 +55,7 @@ h1, h2, h3 {
   }
   button, input {
     font-size: 19px;
+    padding: 7px;
   }
   .img {
     width: 37%;
