@@ -80,6 +80,7 @@ function dialog () {
   minus = parseInt(prompt("На сколько уровней прокачать(x*50, и это минус ваши деньги)", 5));
   dialog1();
   teg();
+  nan();
 }
 function dialog1 () {
   score -= minus * 50;
@@ -87,6 +88,7 @@ function dialog1 () {
   teg();
   document.getElementsByTagName("h3")[0].firstChild.data = "Ваш уровень: " + updating;
   if1()
+  nan();
 }
 //таймер
 window.onload = () => {
@@ -189,5 +191,10 @@ function StartStop() {
   } else {
     clearTimeout(clocktimer);
     init = 0;
+  }
+}
+function nan () {
+  if (money == NaN) {
+    money = 0;
   }
 }
