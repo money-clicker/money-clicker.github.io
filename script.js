@@ -2,6 +2,12 @@ alert("Правила: копите деньги и прокачиваетесь
 var score = 0;
 var updating = 1;
 var minus = 0;
+score = +localStorage.getItem('score');
+if (!(!isNaN(parseFloat(score)) && isFinite(score))) score = 0
+window.onunload = () => {
+  localStorage.setItem('score', score)
+};
+teg();
 function teg () {
   document.getElementsByTagName("h1")[0].firstChild.data = score + "$";
 }
@@ -78,6 +84,7 @@ function reboot () {
 function dialog () {
   minus = 1;
   minus = parseInt(prompt("На сколько уровней прокачать(x*50, и это минус ваши деньги)", 5));
+  if (!(!isNaN(parseFloat(minus)) && isFinite(minus))) return;
   dialog1();
   teg();
   nan();
